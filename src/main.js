@@ -46,8 +46,59 @@ const sampleTodos = ["Learn plain DOM", "Describe elements"];
 const listExample = {
   type: "section",
   content: "A list created from data:",
-  // TODO: Use sampleTodos.map(...) to create one li description per item.
-  children: [],
+  children: sampleTodos.map((todo) => ({
+    type: "li",
+    content: todo,
+  })),
 };
 
 document.querySelector("#list-demo").append(render(listExample));
+
+const todos = [];
+
+function createTodoApp() {
+  return {
+    type: "section",
+    content: "Tiny todo list",
+    children: [
+      {
+        type: "input",
+        props: { id: "new-todo", placeholder: "Write a todo" },
+      },
+      {
+        type: "button",
+        content: "Add todo",
+        onClick: () => {
+          const todoValue = document.querySelector("#new-todo").value;
+          todos.push({ text: todoValue, completed: false });
+
+          redrawTodos();
+        },
+      },
+      {
+        type: "ul",
+        children: todos.map((todo) => ({
+          type: "li",
+          content: `${todo.completed ? "✓" : "○"} ${todo.text}`,
+          children: [
+            {
+              type: "button",
+              content: todo.completed ? "Undo" : "Done",
+              onClick: () => {
+                // TODO: Toggle this todo's completed value and call redrawTodos().
+                todo.completed = !todo.completed;
+                redrawTodos();
+              },
+            },
+          ],
+        })),
+      },
+    ],
+  };
+}
+
+function redrawTodos() {
+  document.querySelector("#todo-app").replaceChildren(render(createTodoApp()));
+}
+
+redrawTodos();
