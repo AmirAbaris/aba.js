@@ -77,7 +77,7 @@ function createTodoApp() {
       },
       {
         type: "ul",
-        children: todos.map((todo) => ({
+        children: todos.map((todo, index) => ({
           type: "li",
           content: `${todo.completed ? "✓" : "○"} ${todo.text}`,
           children: [
@@ -85,8 +85,15 @@ function createTodoApp() {
               type: "button",
               content: todo.completed ? "Undo" : "Done",
               onClick: () => {
-                // TODO: Toggle this todo's completed value and call redrawTodos().
                 todo.completed = !todo.completed;
+                redrawTodos();
+              },
+            },
+            {
+              type: "button",
+              content: "Remove",
+              onClick: () => {
+                todos.splice(index, 1);
                 redrawTodos();
               },
             },

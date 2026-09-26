@@ -16,7 +16,7 @@ We’ll add each guide only when you’re ready for that step:
 8. Add element properties (complete)
 9. Create lists from data (complete)
 10. Add a todo to the list (complete)
-11. Mark a todo complete (current section)
-12. Remove a todo (MVP finish)
+11. Mark a todo complete (complete)
+12. Remove a todo (current section; MVP finish)
 
-Work through [the current guide](guides/11-complete-a-todo.md) only. Later steps are a map, not a checklist to complete all at once.
+Work through [the current guide](guides/12-remove-a-todo.md) only. Later steps are a map, not a checklist to complete all at once.
