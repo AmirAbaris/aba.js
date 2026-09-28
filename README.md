@@ -1,22 +1,5 @@
 # Tiny UI Framework
 
-A small browser JavaScript project for learning how frontend frameworks work by building one.
+A small, browser-based frontend framework built as an engineering learning project.
 
-## Learning map
-
-We’ll add each guide only when you’re ready for that step:
-
-1. Make a page show something (complete)
-2. Describe UI with JavaScript values (complete)
-3. Render descriptions into the DOM (complete)
-4. Handle browser events (complete)
-5. Update UI from state (complete)
-6. Patch changed DOM nodes (complete)
-7. Render nested elements (complete)
-8. Add element properties (complete)
-9. Create lists from data (complete)
-10. Add a todo to the list (complete)
-11. Mark a todo complete (complete)
-12. Remove a todo (current section; MVP finish)
-
-Work through [the current guide](guides/12-remove-a-todo.md) only. Later steps are a map, not a checklist to complete all at once.
+The reusable renderer currently lives in `src/framework/render.js`. The app entry point is intentionally clear while we reset the learning workflow and define the framework MVP.
