@@ -1,5 +1,7 @@
 # Tiny UI Framework
 
-A small, browser-based frontend framework built as an engineering learning project.
+A small browser JavaScript framework built as an engineering learning project. The goal is to understand how framework pieces fit together by implementing them in small phases.
 
-The reusable renderer currently lives in `src/framework/render.js`. The app entry point is intentionally clear while we reset the learning workflow and define the framework MVP.
+Read [the learning plan](docs/learning-plan.md) for the MVP scope and workflow. The active task is [Phase 1: UI descriptions](docs/phase-1-ui-descriptions.md). Implement its TODOs, then ask for a review before moving on.
+
+The older renderer in `src/framework/render.js` is kept as a reference. The new API starts in `src/framework/h.js`.

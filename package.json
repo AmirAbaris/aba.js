@@ -1,0 +1,8 @@
+{
+  "name": "aba.js",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test"
+  }
+}
