@@ -20,6 +20,7 @@ export function createDom(description) {
     }
   }
 
+
   if (description.props) {
     for (const [key, val] of Object.entries(description.props)) {
       if (key.startsWith("on") && typeof val === "function") {
